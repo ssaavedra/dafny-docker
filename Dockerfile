@@ -3,7 +3,7 @@ FROM alpine AS unzipper
 WORKDIR /opt
 
 RUN apk add -U curl unzip
-RUN curl -L https://github.com/Microsoft/dafny/releases/download/v2.2.0/dafny-2.2.0.10923-x64-ubuntu-14.04.zip -o /opt/dafny.zip \
+RUN curl -L https://github.com/Microsoft/dafny/releases/download/v2.3.0/dafny-2.3.0.10506-x64-ubuntu-14.04.zip -o /opt/dafny.zip \
 && (cd /opt && unzip dafny.zip && rm dafny.zip)
 
 FROM mono:5
